@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    command: python manage.py runserver 0.0.0.0:9999
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+    ports:                                                 
+      - 9999:9999  
